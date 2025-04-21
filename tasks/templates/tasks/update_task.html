@@ -1,0 +1,16 @@
+<!-- templates/update_task.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Task</title>
+</head>
+<body>
+    <h2>Update Task</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+        <a href="{% url 'task_list' %}">Cancel</a>
+    </form>
+</body>
+</html>

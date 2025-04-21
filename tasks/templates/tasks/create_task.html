@@ -1,0 +1,16 @@
+<!-- templates/create_task.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Task</title>
+</head>
+<body>
+    <h2>Create New Task</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+        <a href="{% url 'task_list' %}">Back to List</a>
+    </form>
+</body>
+</html>
